@@ -1,0 +1,13 @@
+REVISIONS L3 SPMOS - pack complet (7 matieres)
+
+Contenu : index.html (accueil avec codes) + grh, ergonomie, ethique, schemas, qualite, marketing, data (.html) + icones et manifest (installation sur l'ecran d'accueil) + sw.js (usage hors ligne).
+
+Mise en ligne GitHub Pages (depuis l'iPad, navigateur) :
+1. github.com > New repository > nom : revisions-l3 > Public > Create.
+2. "uploading an existing file" > envoyer TOUS les fichiers du dossier revisions-l3 (pas le ZIP lui-meme) > Commit changes.
+3. Settings > Pages > Source : Deploy from a branch > Branch : main / (root) > Save.
+4. Adresse apres 1 a 2 minutes : https://lalouzem.github.io/revisions-l3/
+5. Safari > Partager > Sur l'ecran d'accueil, pour l'installer.
+
+Les codes d'acces ne sont pas dans ce ZIP. Un code se saisit une fois par matiere et par appareil.
+Progression : enregistree dans le navigateur (localStorage), sur l'appareil et l'adresse utilises.
