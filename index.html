@@ -35,72 +35,33 @@ h1{font-size:1.45rem;margin:6px 0 4px}
 .go{background:var(--pri);color:var(--on-pri);font-weight:700;border-radius:10px;padding:9px 12px;font-size:.85rem;flex:none}
 .foot{margin-top:22px;font-size:.8rem;color:var(--muted);text-align:center}
 
-.lockc{display:block;background:var(--card);border:1px dashed var(--line);border-radius:16px;padding:14px}
-.lockh{display:flex;gap:14px;align-items:center}
-.lockh .cm{display:block;font-size:.82rem;color:var(--muted);margin-top:2px}
-.codeform{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.code{min-height:44px;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);font:600 16px/1.2 var(--la);letter-spacing:.12em;text-transform:uppercase;width:12em;max-width:100%}
-.code::placeholder{letter-spacing:normal;text-transform:none;font-weight:400;color:var(--muted)}
-.vbtn{min-height:44px;padding:8px 18px;border:0;border-radius:999px;background:var(--pri);color:var(--on-pri);font:700 15px var(--la)}
-.cerr{margin:8px 0 0;color:#B5473C;font-size:.85rem;min-height:1.1em}
-.reset{background:none;border:0;color:var(--muted);text-decoration:underline;font:inherit;cursor:pointer;padding:4px}</style>
+</style>
 </head>
 <body>
 <div class="wrap">
 <h1>Révisions L3 SPMOS</h1>
-<p class="lead">7 matières, chacune ouverte par son code. Fiches courtes + 20 questions par unité, correction immédiate, examen de chapitre. Ta progression est enregistrée sur cet appareil.</p>
+<p class="lead">8 matières. Fiches courtes + 20 questions par unité, correction immédiate, examen de chapitre. Ta progression est enregistrée sur cet appareil.</p>
 <div class="tot" id="tot"></div>
 <div class="grid" id="grid"></div>
-<p class="foot">Objectif affiché : 80 % de bonnes réponses par unité (16/20).<br><button class="reset" id="relock">Verrouiller de nouveau les matières</button></p>
+<p class="foot">Objectif affiché : 80 % de bonnes réponses par unité (16/20).</p>
 </div>
-<script>window.L3CODE={"salt": "fed2de0f78eff8c1", "key": "revisions-l3-codes", "h": {"grh": "1e58f068e07faafe40e4804931f1a26e11a219c9be35220d6281969bcd4323cd", "ergonomie": "ac3a6281d073ff7af204e813ab90f82f7f047b376c070c17825a6360a66d8a5b", "ethique": "6ef80103f9889211975c40c18cba18abb4d257f56d2304d13464c545df7f7ce3", "schemas": "016c0e35f9bd9610d5e9e9c4c57c50cae5b80251072cc35d4fb72746a1916299", "qualite": "ac31a3d07a472cb4cc654c204ebd4835261ffe30d71e36900886b050a3dd2604", "marketing": "d804e9cc12b4b70fdeef0b8a91b47e18b5b8ce70236be69619308a7ec440a15b", "data": "c4ca89d42fc2093792e366e322cc671024f21751576f9ef2542902d6ca504eb0"}};</script>
 <script>
 (function(){
 "use strict";
-var sha256=function sha256(ascii){function rr(v,a){return(v>>>a)|(v<<(32-a));}var mp=Math.pow,mw=mp(2,32),L='length',i,j,res='',words=[],bl=ascii[L]*8,hash=sha256.h=sha256.h||[],k=sha256.k=sha256.k||[],pc=k[L],ic={};for(var cand=2;pc<64;cand++){if(!ic[cand]){for(i=0;i<313;i+=cand){ic[i]=cand;}hash[pc]=(mp(cand,.5)*mw)|0;k[pc++]=(mp(cand,1/3)*mw)|0;}}ascii+='\x80';while(ascii[L]%64-56)ascii+='\x00';for(i=0;i<ascii[L];i++){j=ascii.charCodeAt(i);if(j>>8)return;words[i>>2]|=j<<((3-i)%4)*8;}words[words[L]]=((bl/mw)|0);words[words[L]]=(bl);for(j=0;j<words[L];){var w=words.slice(j,j+=16),old=hash;hash=hash.slice(0,8);for(i=0;i<64;i++){var w15=w[i-15],w2=w[i-2],a=hash[0],e=hash[4];var t1=hash[7]+(rr(e,6)^rr(e,11)^rr(e,25))+((e&hash[5])^((~e)&hash[6]))+k[i]+(w[i]=(i<16)?w[i]:(w[i-16]+(rr(w15,7)^rr(w15,18)^(w15>>>3))+w[i-7]+(rr(w2,17)^rr(w2,19)^(w2>>>10)))|0);var t2=(rr(a,2)^rr(a,13)^rr(a,22))+((a&hash[1])^(a&hash[2])^(hash[1]&hash[2]));hash=[(t1+t2)|0].concat(hash);hash[4]=(hash[4]+t1)|0;}for(i=0;i<8;i++){hash[i]=(hash[i]+old[i])|0;}}for(i=0;i<8;i++){for(j=3;j+1;j--){var b=(hash[i]>>(j*8))&255;res+=((b<16)?0:'')+b.toString(16);}}return res;};
-var C=[{"file": "grh.html", "key": "grh", "title": "GRH et management d’équipe", "sub": "M. Mananga · Droit du travail appliqué au management des ressources humaines", "emoji": "👥", "units": 23, "q": 460, "ids": ["1.1", "1.2", "1.3", "1.4", "2.1", "2.2", "2.3", "2.4", "3.1", "3.2", "4.1", "4.2", "4.3", "4.4", "5.1", "5.2", "5.3", "6.1", "6.2", "6.3", "7.1", "7.2", "7.3"]}, {"file": "ergonomie.html", "key": "ergonomie", "title": "Les bases de l’ergonomie", "sub": "Chantal Lebert et Christelle Lemaitre · Sessions 1 et 2", "emoji": "🪑", "units": 59, "q": 1180, "ids": ["1.1", "1.2", "1.3", "1.4", "1.5", "2.1", "2.2", "2.3", "3.1", "3.2", "3.3", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "4.10", "4.11", "4.12", "4.13", "4.14", "4.15", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8", "6.9", "6.10", "6.11", "7.1", "7.2", "7.3", "7.4", "7.5", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9", "9.10", "9.11"]}, {"file": "ethique.html", "key": "ethique", "title": "Éthique et déontologie", "sub": "Cours 1 et 2 · de la réflexion éthique à la déontologie", "emoji": "⚖️", "units": 41, "q": 820, "ids": ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "3.1", "3.2", "3.3", "3.4", "3.5", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8"]}, {"file": "schemas.html", "key": "schemas", "title": "Schémas régionaux de santé", "sub": "Planification sanitaire · ARS, SROS, PRS, accès aux soins", "emoji": "🗺️", "units": 48, "q": 960, "ids": ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "3.1", "3.2", "3.3", "3.4", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "6.1", "6.2", "6.3", "6.4", "7.1", "7.2", "7.3", "8.1", "8.2", "8.3", "8.4", "8.5", "9.1", "9.2", "9.3", "9.4"]}, {"file": "qualite.html", "key": "qualite", "title": "Évaluation de la qualité", "sub": "Services à la personne · ESSMS, processus, référentiel HAS", "emoji": "✅", "units": 50, "q": 1000, "ids": ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8", "6.9", "7.1", "7.2", "7.3", "7.4", "7.5"]}, {"file": "marketing.html", "key": "marketing", "title": "Marketing social", "sub": "Comportements de santé et marketing social · Cours 1", "emoji": "📣", "units": 19, "q": 380, "ids": ["1.1", "1.2", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9", "2.10", "2.11", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6"]}, {"file": "data.html", "key": "data", "title": "La donnée au quotidien", "sub": "Introduction à la Data Science et aux données de santé · Cours 1 à 5", "emoji": "📊", "units": 133, "q": 2660, "ids": ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "7.1", "7.2", "7.3", "7.4", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "8.7", "8.8", "9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8", "10.9", "10.10", "11.1", "11.2", "11.3", "11.4", "11.5", "11.6", "12.1", "12.2", "12.3", "12.4", "12.5", "12.6", "12.7", "12.8", "13.1", "13.2", "13.3", "13.4", "13.5", "13.6", "14.1", "14.2", "14.3", "14.4", "14.5", "14.6", "14.7", "14.8", "14.9", "14.10", "14.11", "14.12", "15.1", "15.2", "15.3", "16.1", "17.1", "17.2", "17.3", "17.4", "17.5", "17.6", "17.7", "18.1", "18.2", "18.3", "18.4", "18.5", "18.6", "18.7", "18.8", "18.9", "19.1", "20.1", "20.2", "20.3", "20.4", "20.5", "20.6", "20.7", "20.8"]}];
-var LC=window.L3CODE;
+var C=[{"file": "grh.html", "key": "grh", "title": "GRH et management d’équipe", "sub": "M. Mananga · Droit du travail appliqué au management des ressources humaines", "emoji": "👥", "units": 23, "q": 460, "ids": ["1.1", "1.2", "1.3", "1.4", "2.1", "2.2", "2.3", "2.4", "3.1", "3.2", "4.1", "4.2", "4.3", "4.4", "5.1", "5.2", "5.3", "6.1", "6.2", "6.3", "7.1", "7.2", "7.3"]}, {"file": "ergonomie.html", "key": "ergonomie", "title": "Les bases de l’ergonomie", "sub": "Chantal Lebert et Christelle Lemaitre · Sessions 1 et 2", "emoji": "🪑", "units": 59, "q": 1180, "ids": ["1.1", "1.2", "1.3", "1.4", "1.5", "2.1", "2.2", "2.3", "3.1", "3.2", "3.3", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "4.10", "4.11", "4.12", "4.13", "4.14", "4.15", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8", "6.9", "6.10", "6.11", "7.1", "7.2", "7.3", "7.4", "7.5", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "9.8", "9.9", "9.10", "9.11"]}, {"file": "ethique.html", "key": "ethique", "title": "Éthique et déontologie", "sub": "Cours 1 et 2 · de la réflexion éthique à la déontologie", "emoji": "⚖️", "units": 41, "q": 820, "ids": ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "3.1", "3.2", "3.3", "3.4", "3.5", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8"]}, {"file": "schemas.html", "key": "schemas", "title": "Schémas régionaux de santé", "sub": "Planification sanitaire · ARS, SROS, PRS, accès aux soins", "emoji": "🗺️", "units": 48, "q": 960, "ids": ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "3.1", "3.2", "3.3", "3.4", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "6.1", "6.2", "6.3", "6.4", "7.1", "7.2", "7.3", "8.1", "8.2", "8.3", "8.4", "8.5", "9.1", "9.2", "9.3", "9.4"]}, {"file": "qualite.html", "key": "qualite", "title": "Évaluation de la qualité", "sub": "Services à la personne · ESSMS, processus, référentiel HAS", "emoji": "✅", "units": 50, "q": 1000, "ids": ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8", "6.9", "7.1", "7.2", "7.3", "7.4", "7.5"]}, {"file": "marketing.html", "key": "marketing", "title": "Marketing social", "sub": "Comportements de santé et marketing social · Cours 1", "emoji": "📣", "units": 19, "q": 380, "ids": ["1.1", "1.2", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9", "2.10", "2.11", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6"]}, {"file": "data.html", "key": "data", "title": "La donnée au quotidien", "sub": "Introduction à la Data Science et aux données de santé · Cours 1 à 5", "emoji": "📊", "units": 133, "q": 2660, "ids": ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "3.10", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "7.1", "7.2", "7.3", "7.4", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "8.7", "8.8", "9.1", "9.2", "9.3", "9.4", "9.5", "9.6", "9.7", "10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8", "10.9", "10.10", "11.1", "11.2", "11.3", "11.4", "11.5", "11.6", "12.1", "12.2", "12.3", "12.4", "12.5", "12.6", "12.7", "12.8", "13.1", "13.2", "13.3", "13.4", "13.5", "13.6", "14.1", "14.2", "14.3", "14.4", "14.5", "14.6", "14.7", "14.8", "14.9", "14.10", "14.11", "14.12", "15.1", "15.2", "15.3", "16.1", "17.1", "17.2", "17.3", "17.4", "17.5", "17.6", "17.7", "18.1", "18.2", "18.3", "18.4", "18.5", "18.6", "18.7", "18.8", "18.9", "19.1", "20.1", "20.2", "20.3", "20.4", "20.5", "20.6", "20.7", "20.8"]}, {"file": "regime.html", "key": "regime", "title": "Régime juridique des structures", "sub": "Création, croissance, consolidation, difficultés et fin · sociétés et associations", "emoji": "⚖️", "units": 71, "q": 1420, "ids": ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "1.7", "1.8", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9", "2.10", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "4.10", "4.11", "4.12", "5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9", "5.10", "6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "7.1", "7.2", "7.3", "7.4", "7.5", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "8.7", "8.8", "8.9", "8.10", "8.11"]}];
 var esc=function(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});};
-function codes(){try{return JSON.parse(localStorage.getItem(LC.key)||"{}")||{};}catch(e){return {};}}
-function codeOk(k){return !!codes()[k];}
-function hashOf(s){
-  if(window.crypto&&crypto.subtle&&window.TextEncoder){
-    return crypto.subtle.digest("SHA-256",new TextEncoder().encode(s)).then(function(b){return Array.prototype.map.call(new Uint8Array(b),function(x){return x.toString(16).padStart(2,"0");}).join("");}).catch(function(){return sha256(s);});
-  }
-  return Promise.resolve(sha256(s));
-}
-function render(){
-  var tu=0,tq=0,tw=0,html="";
-  C.forEach(function(m){
-    tu+=m.units; tq+=m.q;
-    if(!codeOk(m.key)){
-      html+='<div class="lockc"><div class="lockh"><div class="em">'+m.emoji+'</div><div class="bd"><h2>'+esc(m.title)+'</h2><span class="cm">🔑 Code nécessaire</span></div></div><div class="codeform"><input class="code" data-codein="'+m.key+'" placeholder="Code de la matière" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="go" aria-label="Code : '+esc(m.title)+'"><button class="vbtn" data-code="'+m.key+'">Valider</button></div><p class="cerr" id="cerr-'+m.key+'" aria-live="polite"></p></div>';
-      return;
-    }
-    var S={u:{}};
-    try{var v=JSON.parse(localStorage.getItem("l3-"+m.key+"-v2")||"null"); if(v&&v.u) S=v;}catch(e){}
-    var worked=m.ids.filter(function(id){return S.u[id]!=null;}).length;
-    var done=m.ids.filter(function(id){return S.u[id]!=null&&S.u[id]>=16;}).length;
-    tw+=worked;
-    var pct=m.units?Math.round(100*worked/m.units):0;
-    html+='<a class="card" href="'+esc(m.file)+'"><div class="em">'+m.emoji+'</div><div class="bd"><h2>'+esc(m.title)+'</h2><p>'+esc(m.sub)+'</p><div class="bar"><i style="width:'+pct+'%"></i></div><div class="mt"><span>'+worked+'/'+m.units+' unités travaillées</span><span>'+done+' à 80 %+</span></div></div><div class="go">Ouvrir</div></a>';
-  });
-  document.getElementById("grid").innerHTML=html;
-  document.getElementById("tot").innerHTML='<div><b>'+C.length+'</b><span>matières</span></div><div><b>'+tu+'</b><span>unités</span></div><div><b>'+tq+'</b><span>questions</span></div><div><b>'+tw+'/'+tu+'</b><span>travaillées</span></div>';
-}
-function tryCode(k){
-  var i=document.querySelector('[data-codein="'+k+'"]'),er=document.getElementById("cerr-"+k);if(!i)return;
-  var v=i.value.trim().toUpperCase().replace(/\s+/g,"");
-  if(!v){er.textContent="Saisis le code.";return;}
-  hashOf(LC.salt+":"+k+":"+v).then(function(h){
-    if(h===LC.h[k]){var c=codes();c[k]=1;try{localStorage.setItem(LC.key,JSON.stringify(c));}catch(e){}render();}
-    else{er.textContent="Code incorrect.";i.select();}
-  });
-}
-document.addEventListener("click",function(e){var b=e.target.closest("[data-code]");if(b)tryCode(b.dataset.code);});
-document.addEventListener("keydown",function(e){var i=e.target.closest&&e.target.closest("[data-codein]");if(i&&e.key==="Enter"){e.preventDefault();tryCode(i.dataset.codein);}});
-document.getElementById("relock").addEventListener("click",function(){try{localStorage.removeItem(LC.key);}catch(e){}render();});
-render();
+var tu=0,tq=0,tw=0,html="";
+C.forEach(function(m){
+  var S={u:{}};
+  try{var v=JSON.parse(localStorage.getItem("l3-"+m.key+"-v2")||"null"); if(v&&v.u) S=v;}catch(e){}
+  var worked=m.ids.filter(function(id){return S.u[id]!=null;}).length;
+  var done=m.ids.filter(function(id){return S.u[id]!=null&&S.u[id]>=16;}).length;
+  tu+=m.units; tq+=m.q; tw+=worked;
+  var pct=m.units?Math.round(100*worked/m.units):0;
+  html+='<a class="card" href="'+esc(m.file)+'"><div class="em">'+m.emoji+'</div><div class="bd"><h2>'+esc(m.title)+'</h2><p>'+esc(m.sub)+'</p><div class="bar"><i style="width:'+pct+'%"></i></div><div class="mt"><span>'+worked+'/'+m.units+' unités travaillées</span><span>'+done+' à 80 %+</span></div></div><div class="go">Ouvrir</div></a>';
+});
+document.getElementById("grid").innerHTML=html;
+document.getElementById("tot").innerHTML='<div><b>'+C.length+'</b><span>matières</span></div><div><b>'+tu+'</b><span>unités</span></div><div><b>'+tq+'</b><span>questions</span></div><div><b>'+tw+'/'+tu+'</b><span>travaillées</span></div>';
 if("serviceWorker" in navigator&&location.protocol!=="file:"){navigator.serviceWorker.register("sw.js").catch(function(){});}
 })();
 </script>
